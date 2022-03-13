@@ -9,7 +9,7 @@ WORKDIR /tmp
 RUN apt update  && \
     apt upgrade -y && \
     apt install -y \
-        wget unzip ghostscript \
+        wget unzip git ghostscript \
         perl-modules && \
     apt autoremove -y && \
     apt clean && \
