@@ -9,24 +9,24 @@ WORKDIR /tmp
 RUN apt update  && \
     apt upgrade -y && \
     apt install -y \
-        wget unzip git ghostscript \
-        perl-modules && \
+    wget unzip git ghostscript \
+    perl-modules && \
     apt autoremove -y && \
     apt clean && \
     rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
 
 RUN mkdir install-tl-unx && \
     wget -qO- "https://texlive.texjp.org/${TL_VERSION}/tlnet/install-tl-unx.tar.gz" | \
-        tar -xz -C ./install-tl-unx --strip-components=1 && \
+    tar -xz -C ./install-tl-unx --strip-components=1 && \
     printf "%s\n" \
-        "TEXDIR ${TL_PATH}" \
-        "selected_scheme scheme-full" \
-        "option_doc 0" \
-        "option_src 0" \
-        > ./install-tl-unx/texlive.profile && \
+    "TEXDIR ${TL_PATH}" \
+    "selected_scheme scheme-full" \
+    "option_doc 0" \
+    "option_src 0" \
+    > ./install-tl-unx/texlive.profile && \
     ./install-tl-unx/install-tl \
-        -repository "http://texlive.texjp.org/${TL_VERSION}/tlnet" \
-        -profile ./install-tl-unx/texlive.profile && \
+    -repository "http://texlive.texjp.org/${TL_VERSION}/tlnet" \
+    -profile ./install-tl-unx/texlive.profile && \
     rm -rf *
 
 RUN cjk-gs-integrate --cleanup --force && \
