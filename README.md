@@ -10,7 +10,7 @@
 # Example
 
 # Pull image
-docker pull ghcr.io/ykyki/docker-texlive-2020:1.1
+docker pull ghcr.io/ykyki/docker-texlive-2020:1.3
 
 # Run latexmk
 docker run --rm -v $(pwd):/workdir ghcr.io/ykyki/docker-texlive-2020:1.1 latexmk ./target-file-name.tex
