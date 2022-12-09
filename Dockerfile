@@ -1,4 +1,4 @@
-FROM ubuntu:focal
+FROM ubuntu:jammy
 
 ENV TL_VERSION 2020
 ENV TL_PATH    /usr/local/texlive/${TL_VERSION}
