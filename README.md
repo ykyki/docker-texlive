@@ -3,6 +3,7 @@
 ## Packages
 
 - TeX Live 2020 (⚠️ 3.8GB over!): <https://github.com/ykyki/docker-texlive/pkgs/container/docker-texlive-2020>
+- TeX Live 2024 (⚠️ 4.4GB over!): <https://github.com/ykyki/docker-texlive/pkgs/container/docker-texlive-2024>
 
 ## Usage
 
